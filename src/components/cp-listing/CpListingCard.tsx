@@ -12,17 +12,19 @@ const ListingCard = (props: prop) => {
 
   return (
     <>
-      <a href={data.url} className={`${styles['listing-card']}`}>
-        <div className={styles['img-wrap']}>
-          <img className={`${styles["image"]}`} src={imageUrl} alt="card image"/>      
-          <span className={styles['c-tag']}>{data.section}</span>  
+      <a href={data.url} className={`${styles['listing-link']}`}>
+        <div className={`${styles['listing-card']}`}>
+          <div className={styles['img-wrap']}>
+            <img className={`${styles["image"]}`} src={imageUrl} alt="card image"/>      
+            <span className={styles['c-tag']}>{data.section}</span>  
+          </div>
+          <div className={styles['content-wrap']}>          
+            <h3 className={styles['c-title']}>{data.title}</h3>
+            <p className={styles['c-desc']}>{data.abstract}</p>             
+            <span className={`${styles['c-date']}`}>{data.published_date}</span>
+          </div> 
+          <div className={styles['border-wrap']}></div>
         </div>
-        <div className={styles['content-wrap']}>          
-          <h3 className={styles['c-title']}>{data.title}</h3>
-          <p className={styles['c-desc']}>{data.abstract}</p>             
-          <span className={`${styles['c-date']}`}>{data.published_date}</span>
-        </div> 
-        <div className={styles['border-wrap']}></div>
       </a>
     </>
   )
