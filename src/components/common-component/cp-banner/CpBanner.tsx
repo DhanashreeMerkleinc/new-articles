@@ -3,7 +3,7 @@ import styles from './cpBanner.module.scss';
 
 const Banner = () => {
   return (
-    <div className={`${styles['cp-banner']}`}>  
+    <div className={`${styles['cp-banner']} banner`}>  
       <div className={`container`}>  
         <div className={`${styles['image-wrap']}`}>
           <img

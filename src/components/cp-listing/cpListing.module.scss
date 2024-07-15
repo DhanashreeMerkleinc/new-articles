@@ -105,9 +105,11 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
       text-overflow: ellipsis;
+      min-height: 6rem;
       @media only screen and (max-width: $media-mobile) {
         font-size: 1.8rem;
         line-height: 2.2rem;
+        min-height: auto;
       }
     }   
     .c-desc{
