@@ -9,9 +9,9 @@ const Listing = (props : prop) => {
   return (
     <>
       <div className={`container`}>
-        <ul className={`${styles['cp-listing']} listing`}>  
+        <ul className={`${styles['cp-listing']} listing`} data-testid="listing">  
           {props?.articleData?.map((item: any, index: number) => (
-            <li className={`${styles['listing-item']} listing-item`} key={index}>
+            <li className={`${styles['listing-item']} listing-item`} key={index} data-testid="listing-item">
               <ListingCard data={item} />
             </li>
           ))}
