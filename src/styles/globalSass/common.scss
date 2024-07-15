@@ -1,0 +1,152 @@
+@import './config.scss';
+@import './variable.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  @media (min-width: 1024px) and (max-width: 1200px) {
+    font-size: 8.2px;
+  }
+  @media (min-width: 1279px) and (max-width: 1400px) {
+    font-size: 8.9px;
+  }
+  @media (min-width: 1600px) {
+    font-size: 12.4px;
+  }
+}
+
+body {
+  font-family:  $font-regular;
+  background: $clr-root;
+  // font-size: 1.6rem;
+  width: 100%;
+  color: $clr-base;
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+  scrollbar-gutter: initial;
+  position: relative;
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $clr-primary;
+    opacity: 0.8;
+  }
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    opacity: 1;
+  }
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  transition: all 0.2s;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-family: $font-regular;
+  color: $clr-para;
+  text-transform: initial;
+  @media only screen and (max-width: $media-mobile) {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+}
+
+.cm-not-in-page {
+  position: absolute;
+  left: -99999px;
+  top: -99999px;
+}
+
+.cm-line-break {
+  display: block;
+}
+
+.cm-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  transition: 0.5s ease-in-out;
+  background: rgba(247, 247, 247, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  touch-action: auto;
+  -ms-touch-action: auto;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    z-index: 4;
+    touch-action: none;
+    -ms-touch-action: none;
+  }
+}
+
+.cm-overflow-hidden {
+  overflow: hidden !important;
+  position: relative;
+  touch-action: none;
+  -ms-touch-action: none;
+}
+
+.container {
+  // max-width: 117rem;
+  margin: 0px auto;
+  padding: 0px;
+  width: 81.82%;
+
+  @media only screen and (max-width: $media-mobile) {
+    width: 100%;
+    padding: 0rem 2.4rem;
+    max-width: auto;
+  }
+}
+
+.cm-mobile {
+  display: none !important;
+  @media only screen and (max-width: $media-mobile) {
+    display: block !important;
+  }
+}
+
+.cm-desktop {
+  display: block !important;
+  @media only screen and (max-width: $media-mobile) {
+    display: none !important;
+  }
+}
+
+.cm-bold {
+  font-family: $font-bold;
+}
+
+.cm-regular {
+  font-family: $font-regular;
+}
+
+.hide {
+  display: none !important;
+}

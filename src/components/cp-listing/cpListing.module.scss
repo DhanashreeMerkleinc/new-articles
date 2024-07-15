@@ -1,0 +1,158 @@
+@import '../../styles/globalSass/config.scss';
+@import '../../styles/globalSass/variable.scss';
+
+.cp-listing{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 2rem 0 1rem;
+  @include transition(all, 0.5s, ease);
+  
+  .listing-item{
+    width: 32%;
+    margin: 0 0.66% 4rem;
+    @media only screen and (max-width: $media-mobile) {
+      margin: 0px 0 3rem;
+      width: 100%;
+    }
+  }
+}
+
+.listing-card {
+  width: 100%;
+  position: relative;
+  
+  
+  .border-wrap{   
+    background-color: #ddd;   
+    width: 100%;
+    height: 0.4rem;
+    &:after{
+      content: '';
+      width: 0%;
+      height: 0.4rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include transition(width, 0.3s, ease);
+      background-color: #000;   
+    }
+  }
+  &:hover{
+    .border-wrap{   
+      &:after{
+        content: '';
+        width: 100%;
+      }
+    }
+  }
+  .img-wrap{
+    position: relative;   
+    @include border-radius(0.5rem); 
+    &:after{
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.2);
+    }
+    img{
+      object-fit: cover;
+      width: 100%;
+      max-height: 23rem;
+      height: 100%;
+      @include border-radius(0.5rem); 
+      @media only screen and (max-width: $media-mobile) {
+        max-height: 20rem;
+      }
+    }
+    .c-tag{
+      font-family: $font-bold;
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+      color: $clr-root;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $clr-base;
+      padding: 1rem;
+      min-width: 13rem;
+      text-align: center;
+      @include border-radius(0.5rem 0 0.5rem 0); 
+
+      @media only screen and (max-width: $media-mobile) {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+ 
+  .content-wrap{
+    padding: 2rem 0;    
+   
+    .c-title{
+      font-family: $font-bold;
+      font-size: 2.4rem;
+      line-height: 3.8rem;
+      color: $clr-base;
+     
+      margin-bottom: 1rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      @media only screen and (max-width: $media-mobile) {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+      }
+    }   
+    .c-desc{
+      font-family: $font-bold;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      color: $clr-base;
+      margin-bottom: 1.2rem;
+      min-height: 6.5rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
+      @media only screen and (max-width: $media-mobile) {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        margin-bottom: 1.5rem;
+        min-height: auto;
+      }
+    }
+    .c-btn-wrap{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .c-date{
+      font-size: 1.6rem;
+      line-height: 1.9rem;
+      color: $clr-para;
+      @media only screen and (max-width: $media-mobile) {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+      }
+    }
+  }
+
+}
+
+.btn-wrap{
+  text-align: center;
+  margin-bottom: 6rem;
+  .btn{
+    min-width: 36.2rem;
+    display: inline-block;
+  }
+}

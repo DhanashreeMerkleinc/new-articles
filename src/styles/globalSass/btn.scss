@@ -1,0 +1,30 @@
+@import './config.scss';
+@import './variable.scss';
+
+.btn{
+    position: relative;
+    display: inline-block;
+    padding: 1.5rem 2rem;
+    max-width: 12.8rem;   
+    @include border-radius(1rem);
+    @include transition(all, 0.8s , ease);
+    font-family: $font-bold;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+
+    @media only screen and (max-width: $media-mobile) {
+        padding: 1.2rem 1.8rem;
+    }
+  
+    &.btn-primary{
+        background: $clr-primary;
+        color:  $clr-root;
+        border: 1px solid $clr-primary;
+        &:focus, 
+        &:hover{
+            background: $clr-root;
+            color:  $clr-primary;
+            max-width: 17.1rem; 
+        }
+    }
+}
