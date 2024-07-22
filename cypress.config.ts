@@ -10,7 +10,7 @@ export default defineConfig({
   component: {
     devServer: {
       framework: "create-react-app",
-      bundler: "webpack",
+      bundler: "webpack",      
     },
   },
 });
