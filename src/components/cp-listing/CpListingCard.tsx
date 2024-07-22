@@ -8,7 +8,7 @@ interface prop{
 const ListingCard = (props: prop) => {
   const data = props.data;
   const imageData = data.media && data.media.length > 0 ? data.media[0]['media-metadata'].find((meta: { format: string; }) => meta.format === 'mediumThreeByTwo210') : null;
-  const imageUrl = imageData ? imageData.url : '/assets/images/imageBanner.jpeg'; // Use a default image if none is available
+  const imageUrl = imageData;
 
   return (
     <>
