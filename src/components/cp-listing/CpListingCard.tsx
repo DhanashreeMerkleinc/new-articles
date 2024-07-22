@@ -15,7 +15,7 @@ const ListingCard = (props: prop) => {
       <a href={data.url} className={`${styles['listing-link']}`}>
         <div className={`${styles['listing-card']}`}>
           <div className={styles['img-wrap']}>
-            <img className={`${styles["image"]}`} src={imageUrl} alt="card image"/>      
+            <img className={`${styles["image"]}`} src={imageUrl} alt="card"/>      
             <span className={styles['c-tag']}>{data.section}</span>  
           </div>
           <div className={styles['content-wrap']}>          
